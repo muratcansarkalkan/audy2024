@@ -7,10 +7,11 @@ As of now, you can import PA data for NBA Live 2005 and 06. More will be impleme
 ## Prerequisites
 
 - Python 3.10
+- SX
 
 ## Before Use
 
-Make sure to have SX.EXE somewhere in C:\ and add the directory of SX.EXE to PATH variable. Otherwise the tool will not work.
+Make sure to have SX.EXE somewhere in C:\ and add the directory of SX.EXE to PATH variable. Otherwise the tool will not work. You can extract SX.EXE from SX.zip and place it anywhere in disk C. Don't forget where you placed it!
 
 ## How to Use
 
