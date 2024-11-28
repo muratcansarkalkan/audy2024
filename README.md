@@ -15,6 +15,8 @@ Make sure to have SX.EXE somewhere in C:\ and add the directory of SX.EXE to PAT
 
 ## How to Use
 
+Open config.ini in notepad and change the path2005 and path06 values with the path that you installed the games.
+
 Create folders with 4-digit IDs in either speeches2005 or speeches06 (depending on the game you want to import PA sounds) and place .wav files. For now, there are only 3 types of calls available.
 Place .wav files into the folder as 0.wav, 1.wav and 2.wav.
 

@@ -2,6 +2,17 @@ import os
 import subprocess
 import struct
 import shutil
+import configparser
+
+# Create a ConfigParser instance
+config = configparser.ConfigParser()
+
+# Read the .ini file
+config.read('config.ini')
+
+# Access the variables under the [Paths] section
+path2005 = config.get('Paths', 'path2005')
+path06 = config.get('Paths', 'path06')
 
 def import_wav(directory):
     """Adjust volume of all .wav files in a directory and its subdirectories."""
@@ -274,11 +285,19 @@ def insert_before_block(file_path, target_block, insert_content):
         file.write(rest_of_file)
 
 def append_data(directory, game):
-    path = f"D:\\Games\\NBA LIVE {game}\\audio\\speech\\arena\\"
-    hdr_idx = f"{path}xarplhdr.idx"
-    hdr_fcd = f"{path}xarplhdr.fcd"
-    dat_idx = f"{path}xarndat.idx"
-    dat_fcd = f"{path}xarndat.fcd"
+    # path = f"D:\\Games\\NBA LIVE {game}\\audio\\speech\\arena\\"
+
+    if game == "2005":
+        path = os.path.join(path2005, "audio", "speech", "arena")
+    elif game == "06":
+        path = os.path.join(path06, "audio", "speech", "arena")  
+
+    hdr_idx = f"{path}\\xarplhdr.idx"
+    hdr_fcd = f"{path}\\xarplhdr.fcd"
+    dat_idx = f"{path}\\xarndat.idx"
+    dat_fcd = f"{path}\\xarndat.fcd"
+
+    print(hdr_idx)
 
     ids = next(os.walk(directory))[1]
     hdrs = []
