@@ -1,0 +1,13 @@
+notes
+speeches98
+speeches99
+speeches2001
+speeches
+speeches_done
+target
+teamsPA
+*.csv
+teamsPA.zip
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
